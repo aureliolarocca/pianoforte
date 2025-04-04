@@ -1,0 +1,84 @@
+:root {
+  --primary: rgb(0, 0, 0);
+  --secondary: rgb(255, 255, 255);
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 30rem;
+  height: 15rem;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.container-tasti-bianchi {
+  width: 99%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.container-tasti-neri {
+  position: absolute;
+  width: 99%;
+  height: 65%;
+
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tasto-bianco {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: var(--secondary);
+}
+
+.tasto-nero {
+  width: 2rem;
+  height: 100%;
+  background-color: var(--primary);
+
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  position: absolute;
+}
+.tasto-nero:nth-of-type(1) {
+  left: 3.3rem;
+}
+.tasto-nero:nth-of-type(2) {
+  left: 7.5rem;
+}
+.tasto-nero:nth-of-type(3) {
+  left: 16rem;
+}
+.tasto-nero:nth-of-type(4) {
+  left: 20.3rem;
+}
+.tasto-nero:nth-of-type(5) {
+  left: 24.6rem;
+}
+
+.tasto-bianco.active {
+  box-shadow: inset 1px 1px 1px black;
+}
+.tasto-nero.active {
+  box-shadow: inset 2px 2px 20px rgb(115, 115, 115);
+}
